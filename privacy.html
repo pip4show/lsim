@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LIFE / 24 — политика конфиденциальности</title>
+  <meta name="description" content="Какие данные использует приложение LIFE / 24 и куда они уходят.">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon.png" alt="Иконка LIFE / 24">
+    <div>
+      <h1>Политика конфиденциальности</h1>
+      <p class="tagline">LIFE / 24 (LSim) · действует с 26 октября 2026</p>
+    </div>
+  </header>
+
+  <p>
+    LIFE / 24 — личное приложение для iPhone, которым пользуется только его разработчик.
+    У приложения нет сервера, рекламы, аналитики и сторонних SDK.
+  </p>
+
+  <h2>Что хранится на телефоне</h2>
+  <p>
+    Факты из жизни, суммы доходов и расходов, чекпоинты и их история хранятся в локальной базе на iPhone.
+    Отметки самочувствия, сна, лекарств и личный план поддержки хранятся <strong>только на телефоне</strong>:
+    они никогда не отправляются в Google, ассистенту или кому-либо ещё.
+  </p>
+
+  <h2>Что получает Google</h2>
+  <div class="card">
+    <p>
+      Приложение запрашивает у Google один доступ — <code>https://www.googleapis.com/auth/drive.file</code>.
+      С ним оно может открывать и менять только файлы, которые создало само. Остальные файлы
+      Google Диска, почта, контакты и календарь приложению недоступны.
+    </p>
+    <p>В таблицу «Life Simulator Sync» в Диске владельца уходят:</p>
+    <ul>
+      <li>чекпоинты и их статусы (выполнено, пропущено, перенесено) с заметками владельца;</li>
+      <li>факты и суммы, которые владелец не скрыл. Скрытые факты не уходят, а уже отправленный текст затирается, если факт скрыть позже.</li>
+    </ul>
+    <p>
+      Ключи доступа к Google хранятся в связке ключей iPhone и не покидают устройство.
+      Данные из Google используются только для работы этой таблицы — не продаются, не передаются третьим лицам
+      и не используются для обучения моделей или рекламы.
+    </p>
+  </div>
+
+  <h2>Как отозвать доступ и удалить данные</h2>
+  <ul>
+    <li>В приложении: Настройки → Life Simulator Sync → «Отключить Google». Доступ отзывается у Google, ключи стираются с телефона.</li>
+    <li>В аккаунте Google: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> → LSim → удалить доступ.</li>
+    <li>Таблицу можно удалить в Google Диске. Данные на телефоне — в Настройках приложения или удалив приложение.</li>
+  </ul>
+
+  <h2>Связь</h2>
+  <p>Вопросы — через <a href="https://github.com/pip4show">github.com/pip4show</a>.</p>
+
+  <section class="lang" lang="en">
+    <h2>Privacy policy (English)</h2>
+    <p>
+      LIFE / 24 (LSim) is a personal iPhone app used only by its developer. It has no server, ads, analytics or third-party SDKs.
+      All data is stored on the device. Mood, sleep, medication and support-plan entries never leave the device.
+    </p>
+    <p>
+      The app requests a single Google scope, <code>https://www.googleapis.com/auth/drive.file</code>, which only allows access
+      to files the app itself created. It creates one Google Sheet, “Life Simulator Sync”, in the owner’s Google Drive and writes
+      there only checkpoints with their statuses and the life events the owner chose not to hide. Google tokens are kept in the
+      iPhone Keychain. Google user data is used solely to operate that sheet; it is not sold, shared with third parties, or used
+      for advertising or to train models. The app’s use of information received from Google APIs adheres to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+      including the Limited Use requirements.
+    </p>
+    <p>
+      To revoke access: in the app, Settings → Life Simulator Sync → “Disconnect Google”, or at
+      <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Contact:
+      <a href="https://github.com/pip4show">github.com/pip4show</a>.
+    </p>
+  </section>
+
+  <footer><a href="./">← LIFE / 24</a></footer>
+</main>
+</body>
+</html>

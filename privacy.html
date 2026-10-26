@@ -26,8 +26,8 @@
   <h2>Что хранится на телефоне</h2>
   <p>
     Факты из жизни, суммы доходов и расходов, чекпоинты и их история хранятся в локальной базе на iPhone.
-    Отметки самочувствия, сна, лекарств и личный план поддержки хранятся <strong>только на телефоне</strong>:
-    они никогда не отправляются в Google, ассистенту или кому-либо ещё.
+    Отметки самочувствия и сна по умолчанию тоже остаются <strong>только на телефоне</strong> — в таблицу они уходят,
+    только если владелец сам включит это в настройках. Лекарства и личный план поддержки не отправляются никогда.
   </p>
 
   <h2>Что получает Google</h2>
@@ -39,9 +39,14 @@
     </p>
     <p>В таблицу «Life Simulator Sync» в Диске владельца уходят:</p>
     <ul>
-      <li>чекпоинты и их статусы (выполнено, пропущено, перенесено) с заметками владельца;</li>
-      <li>факты и суммы, которые владелец не скрыл. Скрытые факты не уходят, а уже отправленный текст затирается, если факт скрыть позже.</li>
+      <li>чекпоинты, их статусы (выполнено, пропущено, перенесено) и история изменений с заметками владельца;</li>
+      <li>факты и суммы, которые владелец не скрыл. Скрытые факты не уходят, а уже отправленный текст затирается, если факт скрыть позже;</li>
+      <li>отметки настроения, энергии и сна — только после отдельного включения в настройках. При выключении они стираются из таблицы.</li>
     </ul>
+    <p>
+      Для пересчёта сумм в рубли приложение загружает официальные курсы с сайта Банка России (cbr.ru).
+      Никаких личных данных при этом не передаётся.
+    </p>
     <p>
       Ключи доступа к Google хранятся в связке ключей iPhone и не покидают устройство.
       Данные из Google используются только для работы этой таблицы — не продаются, не передаются третьим лицам
@@ -63,12 +68,14 @@
     <h2>Privacy policy (English)</h2>
     <p>
       LIFE / 24 (LSim) is a personal iPhone app used only by its developer. It has no server, ads, analytics or third-party SDKs.
-      All data is stored on the device. Mood, sleep, medication and support-plan entries never leave the device.
+      All data is stored on the device. Mood and sleep entries leave the device only if the owner explicitly turns this on
+      in the app’s settings (and are erased from the sheet when it is turned off); medication and support-plan entries never leave the device.
     </p>
     <p>
       The app requests a single Google scope, <code>https://www.googleapis.com/auth/drive.file</code>, which only allows access
       to files the app itself created. It creates one Google Sheet, “Life Simulator Sync”, in the owner’s Google Drive and writes
-      there only checkpoints with their statuses and the life events the owner chose not to hide. Google tokens are kept in the
+      there only checkpoints with their statuses and change history, the life events the owner chose not to hide and, if enabled,
+      mood and sleep entries. Exchange rates are downloaded from the Bank of Russia (cbr.ru) without sending any personal data. Google tokens are kept in the
       iPhone Keychain. Google user data is used solely to operate that sheet; it is not sold, shared with third parties, or used
       for advertising or to train models. The app’s use of information received from Google APIs adheres to the
       <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
